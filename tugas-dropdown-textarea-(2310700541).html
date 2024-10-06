@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Feedback Pelanggan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+      input[type="submit"] {
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Feedback Pelanggan</h2>
+      <form action="#" method="post">
+        <!-- Dropdown untuk Topik Feedback -->
+        <div class="form-group">
+          <label for="topik">Topik Feedback:</label>
+          <select id="topik" name="topik" required>
+            <option value="" disabled selected>Pilih Topik</option>
+            <option value="Pelayanan">Pelayanan</option>
+            <option value="Produk">Produk</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <!-- Textarea untuk Detail Feedback -->
+        <div class="form-group">
+          <label for="detail-feedback">Detail Feedback:</label>
+          <textarea
+            id="detail-feedback"
+            name="detail_feedback"
+            placeholder="Tuliskan feedback Anda di sini..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Tombol Submit -->
+        <input type="submit" value="Kirim Feedback" />
+      </form>
+    </div>
+  </body>
+</html>

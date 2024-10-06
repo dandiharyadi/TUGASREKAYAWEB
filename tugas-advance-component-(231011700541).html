@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pemesanan Tiket Online</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Optional Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .container {
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center mb-4">Form Pemesanan Tiket Online</h2>
+      <form>
+        <!-- Input Tanggal (Date Picker) -->
+        <div class="mb-3">
+          <label for="tanggal" class="form-label">Pilih Tanggal:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="tanggal"
+            name="tanggal"
+            required
+          />
+        </div>
+
+        <!-- Seleksi Jumlah Tiket (Spinner / Number Input) -->
+        <div class="mb-3">
+          <label for="jumlah_tiket" class="form-label">Jumlah Tiket:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="jumlah_tiket"
+            name="jumlah_tiket"
+            min="1"
+            max="10"
+            value="1"
+            required
+          />
+        </div>
+
+        <!-- Checkbox untuk Menyetujui Syarat dan Ketentuan -->
+        <div class="form-check mb-4">
+          <input type="checkbox" class="form-check-input" id="terms" required />
+          <label class="form-check-label" for="terms">
+            Saya setuju dengan <a href="#">syarat dan ketentuan</a>.
+          </label>
+        </div>
+
+        <!-- Tombol Submit -->
+        <button type="submit" class="btn btn-primary w-100">Pesan Tiket</button>
+      </form>
+    </div>
+  </body>
+</html>
